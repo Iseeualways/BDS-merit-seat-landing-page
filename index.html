@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BDS 2026 Merit Seat Guidance for Karnataka Students | BangaloreStudy</title>
+  <title>BDS 2026 Merit Seat Guidance for Karnataka</title>
   <meta name="description"
     content="Get expert guidance for BDS Government Quota Merit Seats in Karnataka. Top dental colleges, low fee packages, KEA NEET-UG counselling assistance.">
 
@@ -29,26 +29,20 @@
     :root {
       --porcelain: #FCFAF8;
       --paper: #FFFFFF;
-
       --ink: #1F1A1D;
       --ink-soft: #53474D;
-      --muted: #7A6D73;
-
+      --muted: #3d393b;
       --teal: #7A1F3D;
       --teal-dark: #5E1630;
       --teal-tint: #F8EDEF;
-
       --brass: #C89A6A;
       --brass-dark: #A7794E;
       --brass-tint: #F8F1EA;
-
       --line: rgba(31, 26, 29, .10);
       --line-soft: rgba(31, 26, 29, .05);
-
       --shadow-sm: 0 2px 12px rgba(122, 31, 61, .08);
       --shadow-md: 0 14px 34px rgba(122, 31, 61, .12);
       --shadow-lg: 0 26px 60px rgba(122, 31, 61, .18);
-
       --nav-h: 68px;
       --tabs-h: 50px;
       --ease: cubic-bezier(.65, 0, .35, 1);
@@ -86,6 +80,10 @@
     img {
       max-width: 100%;
       display: block;
+    }
+
+    .hero {
+      padding-bottom: 0px;
     }
 
     a {
@@ -278,6 +276,8 @@
 
     .btn-line {
       border-color: var(--line);
+      font-size: 15px !important;
+      font-weight: 500;
       color: var(--ink);
       background: transparent;
       padding: 11px 22px;
@@ -553,6 +553,7 @@
     }
 
     @media (min-width: 992px) {
+     
       .hero {
         padding-top: calc(var(--nav-h) + 76px);
         padding-bottom: 92px;
@@ -845,7 +846,7 @@
 
     .why-body p {
       color: var(--muted);
-      font-size: .92rem;
+      font-size: 1rem;
       max-width: 990px;
     }
 
@@ -912,8 +913,9 @@
     .table-scroll td:first-child {
       width: 50%;
       border-right: 1px solid var(--line);
-      font-weight: 600;
-      color: var(--ink-soft);
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--ink);
     }
 
     .table-scroll th:last-child,
@@ -962,7 +964,7 @@
 
     .record-foot {
       padding: 20px 22px;
-      font-size: .88rem;
+      font-size: 0.9rem;
       color: var(--muted);
       border-top: 1px solid var(--line-soft);
     }
@@ -1370,7 +1372,7 @@
     .directory-idx {
       font-size: .82rem;
       font-weight: 700;
-      color: var(--brass);
+      color: var(--teal);
       font-variant-numeric: tabular-nums;
     }
 
@@ -1431,14 +1433,15 @@
     }
 
     .directory-info h3 {
-      font-size: 1.2rem;
-      font-weight: 600;
+      color: var(--ink);
+      font-size: 1.3rem;
+      font-weight: 500;
       line-height: 1.4;
       margin-bottom: 4px;
     }
 
     .directory-info .loc {
-      font-size: .78rem;
+      font-size: .88rem;
       color: var(--muted);
       display: flex;
       align-items: center;
@@ -1476,7 +1479,7 @@
       margin-top: 30px;
       color: var(--muted);
       font-weight: 500;
-      font-size: .88rem;
+      font-size: 1.4rem;
       font-style: italic;
     }
 
@@ -1617,7 +1620,8 @@
 
     .bottom-cta h2 {
       color: #fff;
-      font-size: clamp(1.5rem, 5vw, 2.3rem);
+      font-weight: 500;
+      font-size: clamp(1.5rem, 5vw, 2.8rem);
       margin-bottom: 24px;
       line-height: 1.25;
     }
@@ -1694,7 +1698,7 @@
       display: flex;
       gap: 10px;
       margin-bottom: 13px;
-      font-size: .84rem;
+      font-size: .9rem;
       align-items: flex-start;
     }
 
@@ -1737,34 +1741,10 @@
       color: rgba(255, 255, 255, .42);
     }
 
-    /* whatsapp float */
-    .wa-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 1001;
-      width: 54px;
-      height: 54px;
-      border-radius: 50%;
-      background: #25D366;
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.4rem;
-      box-shadow: 0 12px 26px rgba(37, 211, 102, .42);
-      transition: transform .25s var(--ease);
-    }
-
-    .wa-float:hover {
-      transform: scale(1.08);
-      color: #fff;
-    }
-
     /* ---- shared responsive container tweaks ---- */
     @media (min-width: 768px) {
       .section {
-        padding: 88px 0;
+        padding: 58px 0;
       }
 
       .section-head {
@@ -1862,7 +1842,7 @@
     .process-text {
       font-size: 1rem;
       font-weight: 600;
-      color: var(--ink-soft);
+      color: var(--muted);
       line-height: 1.5;
       margin: 0;
     }
@@ -1883,6 +1863,7 @@
 
         <nav class="nav-links" id="navLinks">
           <a href="#why" class="nav-link-item">Why Us?</a>
+          <a href="#why-merit-seats" class="nav-link-item">Why Merit Seats?</a>
           <a href="#merit-seat" class="nav-link-item">BDS Merit Seat</a>
           <a href="#cutoffs" class="nav-link-item">Cutoffs</a>
           <a href="#colleges" class="nav-link-item">Top Colleges</a>
@@ -1903,6 +1884,7 @@
       <span class="mobile-tabs__indicator" id="tabIndicator"></span>
       <a href="#home" class="mobile-tab-item active">Home</a>
       <a href="#why" class="mobile-tab-item">Why Us?</a>
+      <a href="#why-merit-seats" class="mobile-tab-item">Why Merit Seats?</a>
       <a href="#merit-seat" class="mobile-tab-item">BDS Merit Seat</a>
       <a href="#cutoffs" class="mobile-tab-item">Cutoffs</a>
       <a href="#colleges" class="mobile-tab-item">Top Colleges</a>
@@ -1916,7 +1898,7 @@
     <div class="wrap">
       <div class="row align-items-center g-4 g-lg-5">
         <div class="col-12 col-lg-7" data-reveal>
-          <span class="hero-eyebrow"><i class="fa-solid fa-compass-drafting"></i>Your BDS Merit Seat Starts
+          <span class="hero-eyebrow"><i class="fa-solid fa-compass-drafting"></i>Your BDS Merit Seat Karnataka Starts
             with the Right Guidance</span>
           <h1>Secure the Best BDS Merit Seat Through <em>NEET&nbsp;UG 2026 Counselling</em></h1>
           <p class="hero-desc">Turn your NEET UG 2026 score into the best possible BDS admission opportunity.
@@ -1972,7 +1954,7 @@
   <section class="section" id="how-we-help">
     <div class="wrap">
       <div class="section-head" data-reveal>
-       
+
         <h2 class="section-title">How We Help</h2>
       </div>
 
@@ -2021,7 +2003,7 @@
   <section class="section bg-paper" id="why">
     <div class="wrap">
       <div class="section-head" data-reveal>
-       
+
         <h2 class="section-title">Why Choose BDS Government Quota Merit Seats?</h2>
       </div>
 
@@ -2043,8 +2025,8 @@
           </div>
           <div class="why-body">
             <h3>Admission Through Merit Based Counselling</h3>
-            <p>BDS government quota seats are allotted through NEET UG based counselling conducted by KEA,
-              MCC, and other state authorities, ensuring a transparent and merit based admission process.
+            <p>BDS seats in India are allotted through NEET UG based counselling conducted by KEA, MCC, and other state
+              authorities, ensuring a transparent and merit based admission process.
             </p>
           </div>
         </div>
@@ -2067,7 +2049,7 @@
   <section class="section" id="merit-seat">
     <div class="wrap">
       <div class="section-head" data-reveal>
-       
+
         <h2 class="section-title">Karnataka BDS Government Quota Merit Seats 2026</h2>
         <p class="section-lead">Admission to BDS Government Quota Merit Seats in Karnataka is conducted through
           the Karnataka Examinations Authority based on NEET UG 2026 scores. Eligible candidates must complete
@@ -2137,11 +2119,12 @@
       </div>
 
       <div class="section-head" style="margin-top:60px;" data-reveal>
-        
-        <h2 class="section-title" style="font-size:clamp(1.3rem,4.4vw,1.9rem);">Karnataka BDS Government Quota
-          Admission Process</h2>
-        <p class="section-lead">Understanding each stage of the counselling process helps you make informed
-          admission decisions. The typical admission process includes:</p>
+
+        <h2 class="section-title" style="font-size:clamp(1.3rem,4.4vw,1.9rem);">Karnataka BDS Government Quota Admission
+          Process</h2>
+        <p class="section-lead">Understanding each stage of the counselling process helps you make informed admission
+          decisions. The typical admission process includes:
+        </p>
       </div>
 
       <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-3 g-lg-4">
@@ -2197,7 +2180,7 @@
       </div>
 
       <div class="section-head" style="margin-top:60px;" data-reveal>
-       
+
         <h2 class="section-title" style="font-size:clamp(1.3rem,4.4vw,1.9rem);">Factors That Determine BDS
           Government Quota Merit Seat Allotment</h2>
         <p class="section-lead">The allotment of Government Quota Merit Seats depends on multiple factors,
@@ -2212,14 +2195,14 @@
         <li><i class="fa-solid fa-circle-check"></i> College preferences filled during counselling</li>
         <li><i class="fa-solid fa-circle-check"></i> Availability of seats in each counselling round</li>
       </ul>
-    </div>
+
   </section>
 
   <!-- ================= CUT-OFFS ================= -->
   <section class="section bg-paper" id="cutoffs">
     <div class="wrap">
       <div class="section-head" data-reveal>
-      
+
         <h2 class="section-title">BDS Government Quota Cutoff in Karnataka 2026</h2>
         <p class="section-lead">Admission to BDS Government Quota Merit Seats in Karnataka is based on NEET UG
           2026 performance and the counselling process conducted by the Karnataka Examinations Authority. The
@@ -2252,7 +2235,8 @@
         <p>Discover Government Quota Merit Seat opportunities with personalized counselling and expert support at every
           stage of the admission process.
         </p>
-        <a href="#contact" class="btn btn-ghost-light">Talk to our Experts <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="#contact" class="btn btn-ghost-light">Book a Free Consultation <i
+            class="fa-solid fa-arrow-right"></i></a>
       </div>
     </div>
   </section>
@@ -2261,10 +2245,11 @@
   <section class="section" id="colleges">
     <div class="wrap">
       <div class="section-head" data-reveal>
-       
+
         <h2 class="section-title">Top Dental Colleges in Karnataka</h2>
-        <p class="section-lead">Securing a BDS Government Quota Seat in the top dental colleges can be the best
-          thing for your career in dentistry. Check the directory below and drop an enquiry to get started.
+        <p class="section-lead">Explore some of the top dental colleges in Bangalore and other cities in Karnataka that
+          offer BDS admissions through Government Quota Merit Seats. Connect with our experts to find the colleges that
+          best match your NEET UG rank and BDS admission preferences.
         </p>
       </div>
 
@@ -2272,11 +2257,10 @@
         <div class="directory-row" data-reveal>
           <span class="directory-idx">01</span>
           <div class="directory-info">
-            <img src="college-logo/Manipal College of Dental Sciences (MCODS).webp"
-              alt="Manipal College of Dental Sciences" class="college-image">
+            <img src="college-logo/College01.webp" alt="Manipal College of Dental Sciences" class="college-image">
 
             <div class="college-text">
-              <h3>Manipal College of Dental Sciences (MCODS)</h3>
+              <h3>Manipal College of Dental Sciences</h3>
               <div class="loc"><i class="fa-solid fa-location-dot"></i> Manipal &amp; Mangalore</div>
             </div>
           </div>
@@ -2284,11 +2268,10 @@
         </div>
         <div class="directory-row" data-reveal>
           <span class="directory-idx">02</span>
-          <div class="directory-info"> <img
-              src="college-logo/A B Shetty Memorial Institute of Dental Sciences (ABSMIDS).webp"
-              alt="Manipal College of Dental Sciences" class="college-image">
+          <div class="directory-info"> <img src="college-logo/College02.webp" alt="Manipal College of Dental Sciences"
+              class="college-image">
             <div class="college-text">
-              <h3>A B Shetty Memorial Institute of Dental Sciences (ABSMIDS)</h3>
+              <h3>A B Shetty Memorial Institute of Dental Sciences</h3>
               <div class="loc"><i class="fa-solid fa-location-dot"></i> Mangalore</div>
             </div>
           </div>
@@ -2296,10 +2279,10 @@
         </div>
         <div class="directory-row" data-reveal>
           <span class="directory-idx">03</span>
-          <div class="directory-info"> <img src="college-logo/JSS Dental College & Hospital.webp"
-              alt="Manipal College of Dental Sciences" class="college-image">
+          <div class="directory-info"> <img src="college-logo/College03.webp" alt="Manipal College of Dental Sciences"
+              class="college-image">
             <div class="college-text">
-              <h3>JSS Dental College &amp; Hospital</h3>
+              <h3>JSS Dental College and Hospital</h3>
               <div class="loc"><i class="fa-solid fa-location-dot"></i> Mysore</div>
             </div>
           </div>
@@ -2307,8 +2290,8 @@
         </div>
         <div class="directory-row" data-reveal>
           <span class="directory-idx">04</span>
-          <div class="directory-info"> <img src="college-logo/Yenepoya Dental College.webp"
-              alt="Manipal College of Dental Sciences" class="college-image">
+          <div class="directory-info"> <img src="college-logo/College04.webp" alt="Manipal College of Dental Sciences"
+              class="college-image">
             <div class="college-text">
               <h3>Yenepoya Dental College</h3>
               <div class="loc"><i class="fa-solid fa-location-dot"></i> Mangalore</div>
@@ -2318,9 +2301,8 @@
         </div>
         <div class="directory-row" data-reveal>
           <span class="directory-idx">05</span>
-          <div class="directory-info"> <img
-              src="college-logo/Faculty of Dental Sciences, Ramaiah University of Applied Sciences (RUAS).webp"
-              alt="Manipal College of Dental Sciences" class="college-image">
+          <div class="directory-info"> <img src="college-logo/College05.webp" alt="Manipal College of Dental Sciences"
+              class="college-image">
             <div class="college-text">
               <h3>Faculty of Dental Sciences, Ramaiah University of Applied Sciences (RUAS)</h3>
               <div class="loc"><i class="fa-solid fa-location-dot"></i> Bangalore</div>
@@ -2330,11 +2312,10 @@
         </div>
         <div class="directory-row" data-reveal>
           <span class="directory-idx">06</span>
-          <div class="directory-info"> <img
-              src="college-logo/Vydehi Institute of Dental Sciences & Research Centre (VIDSRC).webp"
-              alt="Manipal College of Dental Sciences" class="college-image">
+          <div class="directory-info"> <img src="college-logo/College06.webp" alt="Manipal College of Dental Sciences"
+              class="college-image">
             <div class="college-text">
-              <h3>Vydehi Institute of Dental Sciences &amp; Research Centre (VIDSRC)</h3>
+              <h3>Vydehi Institute of Dental Sciences and Research Centre</h3>
               <div class="loc"><i class="fa-solid fa-location-dot"></i> Bangalore</div>
             </div>
           </div>
@@ -2342,8 +2323,8 @@
         </div>
         <div class="directory-row" data-reveal>
           <span class="directory-idx">07</span>
-          <div class="directory-info"> <img src="college-logo/The Oxford Dental College.webp"
-              alt="Manipal College of Dental Sciences" class="college-image">
+          <div class="directory-info"> <img src="college-logo/College07.webp" alt="Manipal College of Dental Sciences"
+              class="college-image">
             <div class="college-text">
               <h3>The Oxford Dental College</h3>
               <div class="loc"><i class="fa-solid fa-location-dot"></i> Bangalore</div>
@@ -2353,10 +2334,10 @@
         </div>
         <div class="directory-row" data-reveal>
           <span class="directory-idx">08</span>
-          <div class="directory-info"> <img src="college-logo/KLE Vishwanath Katti Institute of Dental Sciences.webp"
-              alt="Manipal College of Dental Sciences" class="college-image">
+          <div class="directory-info"> <img src="college-logo/College08.webp" alt="Manipal College of Dental Sciences"
+              class="college-image">
             <div class="college-text">
-              <h3>KLE Vishwanath Katti Institute of Dental Science</h3>
+              <h3>KLE Vishwanath Katti Institute of Dental Sciences</h3>
               <div class="loc"><i class="fa-solid fa-location-dot"></i> Belagavi</div>
             </div>
           </div>
@@ -2364,10 +2345,10 @@
         </div>
         <div class="directory-row" data-reveal>
           <span class="directory-idx">09</span>
-          <div class="directory-info"> <img src="college-logo/RajaRajeswari Dental College & Hospital (RRDCH).webp"
-              alt="Manipal College of Dental Sciences" class="college-image">
+          <div class="directory-info"> <img src="college-logo/College09.webp" alt="Manipal College of Dental Sciences"
+              class="college-image">
             <div class="college-text">
-              <h3>Rajarajeswari Dental College &amp; Hospital (RRDCH)</h3>
+              <h3>RajaRajeswari Dental College and Hospital</h3>
               <div class="loc"><i class="fa-solid fa-location-dot"></i> Bangalore</div>
             </div>
           </div>
@@ -2375,10 +2356,10 @@
         </div>
         <div class="directory-row" data-reveal>
           <span class="directory-idx">10</span>
-          <div class="directory-info"> <img src="college-logo/BGS.webp" alt="Manipal College of Dental Sciences"
+          <div class="directory-info"> <img src="college-logo/College10.webp" alt="Manipal College of Dental Sciences"
               class="college-image">
             <div class="college-text">
-              <h3>Sri Siddhartha Dental College &amp; Hospital</h3>
+              <h3>Sri Siddhartha Dental College and Hospital</h3>
               <div class="loc"><i class="fa-solid fa-location-dot"></i> Tumkur</div>
             </div>
           </div>
@@ -2386,10 +2367,10 @@
         </div>
         <div class="directory-row" data-reveal>
           <span class="directory-idx">11</span>
-          <div class="directory-info"> <img src="college-logo/SDM College of Dental Sciences & Hospital.webp"
-              alt="Manipal College of Dental Sciences" class="college-image">
+          <div class="directory-info"> <img src="college-logo/College11.webp" alt="Manipal College of Dental Sciences"
+              class="college-image">
             <div class="college-text">
-              <h3>SDM College of Dental Sciences &amp; Hospital</h3>
+              <h3>SDM College of Dental Sciences and Hospital</h3>
               <div class="loc"><i class="fa-solid fa-location-dot"></i> Dharwad</div>
             </div>
           </div>
@@ -2397,11 +2378,55 @@
         </div>
         <div class="directory-row" data-reveal>
           <span class="directory-idx">12</span>
-          <div class="directory-info"> <img src="college-logo/BGS.webp" alt="Manipal College of Dental Sciences"
+          <div class="directory-info"> <img src="college-logo/College12.webp" alt="Manipal College of Dental Sciences"
               class="college-image">
             <div class="college-text">
-              <h3>Dayananda Sagar College of Dental Sciences (DSCDS)</h3>
+              <h3>Dayananda Sagar College of Dental Sciences</h3>
               <div class="loc"><i class="fa-solid fa-location-dot"></i> Bangalore</div>
+            </div>
+          </div>
+          <a href="#contact" class="btn btn-line"><span>Enquire</span> <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="directory-row" data-reveal>
+          <span class="directory-idx">13</span>
+          <div class="directory-info"> <img src="college-logo/College13.webp" alt="Manipal College of Dental Sciences"
+              class="college-image">
+            <div class="college-text">
+              <h3>A J Institute of Dental Sciences</h3>
+              <div class="loc"><i class="fa-solid fa-location-dot"></i> Mangalore</div>
+            </div>
+          </div>
+          <a href="#contact" class="btn btn-line"><span>Enquire</span> <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="directory-row" data-reveal>
+          <span class="directory-idx">14</span>
+          <div class="directory-info"> <img src="college-logo/College14.webp" alt="Manipal College of Dental Sciences"
+              class="college-image">
+            <div class="college-text">
+              <h3>Srinivas Institute of Dental Sciences</h3>
+              <div class="loc"><i class="fa-solid fa-location-dot"></i> Mangalore</div>
+            </div>
+          </div>
+          <a href="#contact" class="btn btn-line"><span>Enquire</span> <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="directory-row" data-reveal>
+          <span class="directory-idx">15</span>
+          <div class="directory-info"> <img src="college-logo/College15.webp" alt="Manipal College of Dental Sciences"
+              class="college-image">
+            <div class="college-text">
+              <h3>Sri Venkateshwara Dental College and Hospital</h3>
+              <div class="loc"><i class="fa-solid fa-location-dot"></i> Bangalore</div>
+            </div>
+          </div>
+          <a href="#contact" class="btn btn-line"><span>Enquire</span> <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="directory-row" data-reveal>
+          <span class="directory-idx">16</span>
+          <div class="directory-info"> <img src="college-logo/College16.webp" alt="Manipal College of Dental Sciences"
+              class="college-image">
+            <div class="college-text">
+              <h3>Sri Devaraj Urs Academy of Higher Education and Research</h3>
+              <div class="loc"><i class="fa-solid fa-location-dot"></i> Kolar</div>
             </div>
           </div>
           <a href="#contact" class="btn btn-line"><span>Enquire</span> <i class="fa-solid fa-arrow-right"></i></a>
@@ -2416,7 +2441,7 @@
     <div class="wrap">
       <div class="faq-split">
         <div class="faq-side" data-reveal>
-         
+
           <h2 class="section-title">Frequently Asked Questions</h2>
           <p class="section-lead">The questions Karnataka students ask us most about BDS counselling. Don't
             see yours here? Just ask.</p>
@@ -2426,64 +2451,73 @@
         <div class="faq-tabs" data-reveal>
           <div class="faq-tab open">
             <button class="faq-tab-btn" aria-expanded="true">
-              <span class="faq-tab-q">Who conducts the Karnataka BDS Counselling Process?</span>
+              <span class="faq-tab-q">Who is eligible for BDS Government Quota Merit Seats in Karnataka?</span>
               <span class="faq-tab-icon"><i class="fa-solid fa-plus"></i></span>
             </button>
             <div class="faq-tab-panel">
               <div class="faq-tab-panel-inner">
-                <p>The Karnataka Examinations Authority (KEA) conducts the BDS Counselling process every
-                  year for BDS admissions in Karnataka.</p>
+                <p>Candidates must qualify NEET UG 2026 and satisfy the eligibility criteria prescribed by the Karnataka
+                  Examinations Authority (KEA). Eligibility requirements, including domicile and reservation criteria
+                  where applicable, are determined as per the official KEA counselling guidelines.
+                </p>
               </div>
             </div>
           </div>
           <div class="faq-tab">
             <button class="faq-tab-btn" aria-expanded="false">
-              <span class="faq-tab-q">Who releases the Karnataka Merit List NEET-UG 2023?</span>
+              <span class="faq-tab-q"> How are BDS Government Quota Merit Seats allotted in Karnataka?</span>
               <span class="faq-tab-icon"><i class="fa-solid fa-plus"></i></span>
             </button>
             <div class="faq-tab-panel">
               <div class="faq-tab-panel-inner">
-                <p>The Karnataka Examinations Authority (KEA) will release the NEET-UG Karnataka state
-                  merit list 2023.</p>
+                <p>BDS Government Quota Merit Seats are allotted through the KEA counselling process based on factors
+                  such as your NEET UG rank, category, eligibility, college preferences, seat availability, and the
+                  counselling round.
+                </p>
               </div>
             </div>
           </div>
           <div class="faq-tab">
             <button class="faq-tab-btn" aria-expanded="false">
-              <span class="faq-tab-q">When will the KEA NEET merit list for BDS be released?</span>
+              <span class="faq-tab-q">Can I participate in multiple rounds of KEA BDS counselling?</span>
               <span class="faq-tab-icon"><i class="fa-solid fa-plus"></i></span>
             </button>
             <div class="faq-tab-panel">
               <div class="faq-tab-panel-inner">
-                <p>The NEET-UG Karnataka state merit list 2023 will be released after KEA's NEET
-                  document verification in Karnataka and before commencement of the first round of KEA
-                  BDS 2023&ndash;24 counselling.</p>
+                <p>Yes, eligible candidates can participate in multiple counselling rounds conducted by KEA, subject to
+                  the counselling rules and seat availability. Participating in subsequent rounds may provide additional
+                  admission opportunities depending on your rank and preferences.
+                </p>
               </div>
             </div>
           </div>
           <div class="faq-tab">
             <button class="faq-tab-btn" aria-expanded="false">
-              <span class="faq-tab-q">Should students participate in KEA NEET Counselling to acquire a BDS
-                merit seat?</span>
+              <span class="faq-tab-q"> How can expert guidance help me during BDS Government Quota counselling?
+              </span>
               <span class="faq-tab-icon"><i class="fa-solid fa-plus"></i></span>
             </button>
             <div class="faq-tab-panel">
               <div class="faq-tab-panel-inner">
-                <p>Yes, students need to participate in the KEA NEET counselling to get a BDS merit
-                  seat.</p>
+                <p>Expert guidance can help you understand the counselling process, shortlist colleges based on your
+                  NEET UG rank, make informed choice filling decisions, stay updated on important counselling events,
+                  and complete each stage of the admission process with confidence.
+                </p>
               </div>
             </div>
           </div>
           <div class="faq-tab">
             <button class="faq-tab-btn" aria-expanded="false">
-              <span class="faq-tab-q">What is the BDS Government Quota NEET-UG Cut-off for colleges in
-                Karnataka?</span>
+              <span class="faq-tab-q">Why should I consider a Government Quota Merit Seat for BDS in Karnataka?
+              </span>
               <span class="faq-tab-icon"><i class="fa-solid fa-plus"></i></span>
             </button>
             <div class="faq-tab-panel">
               <div class="faq-tab-panel-inner">
-                <p>The BDS government quota NEET-UG cut-off varies every year. It is higher than the BDS
-                  management quota cut-off.</p>
+                <p>Government Quota Merit Seats generally offer a more affordable fee structure while providing access
+                  to recognised dental colleges with quality academics, experienced faculty, and clinical training.
+                  Admission is based on merit through the official counselling process conducted by KEA.
+                </p>
               </div>
             </div>
           </div>
@@ -2495,19 +2529,20 @@
   <!-- ================= BOTTOM CTA ================= -->
   <section class="bottom-cta">
     <div class="wrap">
-      <h2 data-reveal>Planning to Pursue BDS in Karnataka?</h2>
-      <p class="text-white">Discover Government Quota Merit Seat opportunities with personalized counselling and expert
-        support at
-        every stage of the admission process.
+      <h2 data-reveal>Your Future in Dentistry Begins with the <br> <span style="font-weight: 700;">Right Choice</span>
+      </h2>
+      <p class="text-white mb-4">Explore BDS Government Quota Merit Seat opportunities in Karnataka and take the<br>
+        next step
+        towards a rewarding dental career.
       </p>
-      <a href="#contact" class="btn btn-brass" data-reveal data-reveal-delay="1">Book a Free Consultation <i
+      <a href="#contact" class="btn btn-brass" data-reveal data-reveal-delay="1">Begin Your Journey <i
           class="fa-solid fa-arrow-right"></i></a>
     </div>
   </section>
 
   <!-- ================= FOOTER ================= -->
   <footer class="site-footer" id="footer">
-    <div class="wrap">
+    <div class="wrap" style="padding-inline: 90px;">
       <div class="footer-grid">
         <div>
           <div class="footer-brand">
@@ -2525,11 +2560,22 @@
         <div>
           <h5>Connect With Us</h5>
           <ul class="footer-contact">
-            <li><i class="fa-solid fa-phone"></i> 080-2345 4567 &amp; 080-2366 3969</li>
-            <li><i class="fa-solid fa-phone-volume"></i> 1800 123 8698 (Toll Free)</li>
-            <li><i class="fa-brands fa-whatsapp"></i> WhatsApp: +91 75024 36552</li>
-            <li><i class="fa-solid fa-mobile-screen"></i> +91 76049 55521</li>
-            <li><i class="fa-solid fa-envelope"></i> info@bangalorestudy.com</li>
+            <li><!-- Call -->
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:+918022455\u200B91">080-22454991</a> &amp; <a href="tel:+918026631\u200B169">080-26631169</a>
+            </li>
+            <li><!-- Call -->
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:+9118001208696">1800 120 8696</a> <span class="muted">(Toll Free)</span>
+            </li>
+            <li><!-- Globe -->
+              <i class="fa-solid fa-globe"></i>
+              Dubai : <a href="tel:+971502436552">+971 50 243 6552</a>
+            </li>
+            <li><!-- Call -->
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:+971504955123">+971 50 495 5123</a>
+            </li>
           </ul>
           <div class="social-row">
             <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
@@ -2540,12 +2586,11 @@
           </div>
         </div>
       </div>
-      <div class="footer-bottom">&copy; <span id="yearNow"></span> BangaloreStudy.com. All Rights Reserved.</div>
+      <div class="footer-bottom"></div>
     </div>
   </footer>
 
-  <a href="https://wa.me/917502436552" class="wa-float" aria-label="Chat on WhatsApp" target="_blank" rel="noopener"><i
-      class="fa-brands fa-whatsapp"></i></a>
+
 
   <!-- Bootstrap JS bundle (Popper included) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
