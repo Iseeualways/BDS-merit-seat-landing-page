@@ -200,7 +200,7 @@
         }
 
         .section-title {
-            font-size: clamp(1.55rem, 5.6vw, 2.5rem);
+            font-size: clamp(1.65rem, 5.6vw, 2.5rem);
             font-weight: 600;
             margin-bottom: 14px;
             line-height: 1.16;
@@ -215,7 +215,7 @@
 
         @media (max-width: 768px) {
             section[id] {
-                scroll-margin-top: 140px;
+                scroll-margin-top: 100px;
             }
         }
 
@@ -1598,9 +1598,8 @@
             transform: scale(1.1);
         }
 
-        /* ---- hide logo image on mobile ---- */
-        @media (max-width: 767px) {
-            .ftr__logo img {
+        @media (max-width: 768px) {
+            .faq-img {
                 display: none;
             }
         }
@@ -2096,6 +2095,12 @@
                 .section-head-center .section-lead {
                     max-width: 1460px;
                     margin: 16px auto 0;
+                }
+
+                @media (max-width: 768px) {
+                    .section-head-center {
+                        text-align: left;
+                    }
                 }
             </style>
 
@@ -2934,6 +2939,12 @@
             background: var(--ink);
             color: rgba(255, 255, 255, .66);
             padding: 24px 50px;
+        }
+
+        @media (max-width: 768px) {
+            .ftr {
+                padding: 20px 6px;
+            }
         }
 
         .ftr__container {
