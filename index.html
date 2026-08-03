@@ -596,9 +596,9 @@
                 linear-gradient(90deg,
                     rgba(250, 250, 250, 0.96) 0%,
                     rgba(250, 250, 250, 0.986) 22%,
-                    rgba(245, 243, 243, 0.286) 48%,
-                    rgba(8, 1, 1, 0.12) 72%,
-                    rgba(23, 22, 22, 0.398) 100%),
+                    rgba(245, 243, 243, 0.451) 48%,
+                    rgba(255, 255, 255, 0.522) 72%,
+                    rgba(253, 253, 253, 0.988) 100%),
                 url('Media/hero_bg.png') center center / cover no-repeat;
             background-position: 120% 50%;
             filter: saturate(1.65) contrast(1.03);
@@ -750,18 +750,26 @@
         }
 
         /* lead form card */
-        .lead-card {
-            background: linear-gradient(135deg, rgb(238, 236, 236) 0%, rgb(172, 172, 172) 100%);
-            border-radius: 4px;
-            padding: 20px 26px;
-            border-top: 3px solid var(--brass);
-            position: relative;
+       .lead-card {
+    position: relative;
+    background: #fff;
+    padding: 26px;
+    border-radius: 12px;
+    border: 1px solid rgba(75, 9, 9, 0.57);
+    box-shadow:
+        0 1px 2px rgba(0,0,0,.06),
+        0 8px 20px rgba(0,0,0,.08),
+        0 24px 60px rgba(0,0,0,.08);
+    transition: all .35s ease;
+}
 
-            box-shadow:
-                0 2px 6px rgba(255, 255, 255, 0.04),
-                0 12px 30px rgba(0, 0, 0, 0.08),
-                0 24px 60px rgba(0, 0, 0, 0.06);
-        }
+.lead-card:hover{
+    transform: translateY(-4px);
+    box-shadow:
+        0 2px 6px rgba(0,0,0,.05),
+        0 16px 35px rgba(0,0,0,.08),
+        0 35px 80px rgba(122,31,61,.10);
+}
 
         .lead-card h3 {
             font-size: 16px;
@@ -1857,7 +1865,7 @@
 
                 <a href="tel:+918023454567" class="nav-call">
                     <span class="icon-circle"><i class="fa-solid fa-phone"></i></span>
-                    <span>1800 120 8696 (Toll Free)</span>
+                    <span>080&#8209;2345 4567</span>
                 </a>
             </div>
         </div>
