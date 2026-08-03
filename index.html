@@ -55,7 +55,7 @@
             --shadow-lg: 0 28px 64px rgba(19, 35, 47, .16);
 
             /* Layout */
-            --nav-h: 68px;
+            --nav-h: 66px;
             --tabs-h: 50px;
 
             /* Animation */
@@ -262,14 +262,16 @@
             transform: translateX(3px);
         }
 
-        .btn-primary {
+        .btn-primarys {
             background: var(--ink);
             color: #fff;
         }
 
-        .btn-primary:hover {
-            background: var(--brass-dark);
+        .btn-primarys:hover {
+            background: var(--muted);
+            color: #fff;
         }
+
 
         .btn-ghost-light {
             font-size: 16px;
@@ -481,7 +483,7 @@
             display: flex;
             align-items: center;
             gap: 9px;
-            font-size: .82rem;
+            font-size: .42rem;
             font-weight: 600;
             color: var(--ink);
             padding: 8px 16px 8px 8px;
@@ -490,8 +492,8 @@
         }
 
         .nav-call .icon-circle {
-            width: 30px;
-            height: 30px;
+            width: 20px !important;
+            height: 20px !important;
             border-radius: 50%;
             background: var(--teal);
             color: #fff;
@@ -509,7 +511,7 @@
             right: 0;
             z-index: 999;
             top: var(--nav-h);
-            background: var(--paper);
+            background: var(--porcelain);
             border-bottom: 1px solid var(--line);
             box-shadow: var(--shadow-sm);
             transition: transform .35s var(--ease);
@@ -552,7 +554,7 @@
             padding: 8px 15px;
             font-size: .78rem;
             font-weight: 500;
-            color: var(--ink-soft);
+            color: var(--ink);
             border-radius: 3px;
             white-space: nowrap;
             transition: color .25s var(--ease);
@@ -599,27 +601,25 @@
                 padding-bottom: 92px;
             }
         }
-        
 
-       .hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: -2;
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: -2;
+            background:
+                linear-gradient(90deg,
+                    rgba(250, 250, 250, 0.96) 0%,
+                    rgba(250, 250, 250, 0.82) 22%,
+                    rgba(252, 252, 252, 0.313) 48%,
+                    rgba(237, 233, 233, 0.189) 72%,
+                    rgba(23, 22, 22, 0.171) 100%),
+                url('Media/hero_bg.png') center center / cover no-repeat;
+            background-position: 120% 50%;
+            filter: saturate(1.05) contrast(1.03);
+        }
 
-    background:
-        linear-gradient(
-            90deg,
-            rgba(250,250,250,0.96) 0%,
-            rgba(250,250,250,0.82) 22%,
-            rgba(250,250,250,0.35) 48%,
-            rgba(122,31,61,0.08) 72%,
-            rgba(255,255,255,0.05) 100%
-        ),
-        url('Media/ChatGPT Image Aug 1, 2026, 11_01_54 AM.png') center center / cover no-repeat;
 
-    filter: saturate(1.05) contrast(1.03);
-}
 
 
         @media (min-width: 992px) {
@@ -629,10 +629,23 @@
         }
 
         /* mobile: use a different hero image for smaller screens */
+        @media (max-width: 991px) {
+
+            .navbar-inner {
+                height: 70px;
+                /* or 62px */
+            }
+
+            .mobile-tabs {
+                top: 65px;
+            }
+
+        }
+
         @media (max-width: 791px) {
 
             .brand-mark {
-                width: 130px;
+                width: 110px;
             }
 
             .navbar-inner {
@@ -669,7 +682,7 @@
 
                 color: #5E1630 !important;
                 letter-spacing: .02em !important;
-                background: rgba(252, 246, 246, 0.783) !important;
+                background: rgba(249, 249, 249, 0.783) !important;
                 border: 1px solid rgba(60, 5, 5, 0.075) !important;
             }
 
@@ -679,12 +692,13 @@
 
             .hero p.hero-desc {
                 color: black !important;
+                font-size: 0.9rem;
             }
 
             .hero::before {
                 background:
 
-                    url('Media/BG_03.webp') center center / 130% auto no-repeat;
+                    url('Media/BG_02.webp') left center / 120% auto no-repeat;
 
                 background-attachment: scroll;
             }
@@ -695,24 +709,25 @@
             align-items: center;
             gap: 9px;
             padding: 7px 15px;
-            border-radius: 100px;
-            background: rgba(227, 160, 160, 0.172);
-            border: 1px solid rgba(255, 255, 255, 0.788);
+            border-top-right-radius: 60px;
+            border-bottom-right-radius: 60px;
+            background: rgb(251, 251, 251);
+            border: 1px solid rgba(59, 16, 16, 0.16);
             color: #2d2a2a;
-            font-size: .68rem;
-            font-weight: 700;
-            letter-spacing: .12em;
+            font-size: .78rem;
+            font-weight: 600;
+            letter-spacing: .04em;
             text-transform: uppercase;
             margin-bottom: 22px;
         }
 
         .hero-eyebrow i {
-            color: var(--brass);
+            color: var(--teal);
         }
 
         .hero h1 {
             color: #13232f;
-            font-size: clamp(1.9rem, 6.4vw, 2.7rem);
+            font-size: clamp(2.3rem, 6.4vw, 2.7rem);
             line-height: 1.12;
             margin-bottom: 18px;
             font-weight: 600;
@@ -742,6 +757,11 @@
         @media (max-width: 400px) {
             .hero-cta-row {
                 flex-direction: column;
+            }
+
+            .hero-eyebrow i {
+                color: var(--muted);
+                font-size: 20px;
             }
         }
 
@@ -931,7 +951,7 @@
         .record-card {
             background: var(--paper);
             border: 1px solid var(--line);
-            border-radius: 4px;
+            border-radius: 10px;
             box-shadow: var(--shadow-sm);
             overflow: hidden;
             margin-bottom: 30px;
@@ -943,9 +963,14 @@
             align-items: center;
             gap: 14px;
             flex-wrap: wrap;
-            padding: 18px 22px;
+            padding: 12px 22px;
             background: var(--ink);
             color: #fff;
+        }
+
+        tbody {
+            outline: 2px solid rgb(239, 232, 232) !important;
+            outline-offset: -1px;
         }
 
         .record-head span.file-no {
@@ -957,8 +982,8 @@
         }
 
         .record-head span.file-title {
-            font-size: 1.1rem;
-            font-weight: 700;
+            font-size: 1.25rem;
+            font-weight: 600;
         }
 
         .table-scroll {
@@ -976,7 +1001,7 @@
         .table-scroll th,
         .table-scroll td {
             width: 50%;
-            padding: 13px 22px;
+            padding: 8px 22px;
             text-align: left;
             border-bottom: 1px solid var(--line-soft);
             vertical-align: middle;
@@ -986,7 +1011,7 @@
         /* Center divider */
         .table-scroll th:first-child,
         .table-scroll td:first-child {
-             text-align: center;
+            text-align: center;
             width: 50%;
             border-right: 1px solid var(--line);
             font-size: 17px;
@@ -1204,9 +1229,9 @@
             align-items: flex-start;
             gap: 12px;
             background: var(--paper);
-            padding: 17px 19px;
-            font-size: .98rem;
-            font-weight: 400;
+            padding: 12px 19px;
+            font-size: 1rem;
+            font-weight: 500;
             color: var(--ink);
         }
 
@@ -1375,22 +1400,32 @@
         /* ==========================================================================
        9. COLLEGE DIRECTORY — index list, not repeated cards
        ========================================================================== */
-        .directory {
-            border-top: 1px solid var(--line);
-        }
 
         .directory-row {
             display: grid;
             grid-template-columns: 40px 1fr auto;
-            gap: 16px;
+            gap: 18px;
             align-items: center;
-            padding: 10px 4px;
-            border-bottom: 1px solid var(--line);
-            transition: background .25s var(--ease);
+            padding: 14px 18px;
+            margin-bottom: 12px;
+
+            background: #fff;
+            border: 1px solid rgba(122, 31, 61, .08);
+            border-radius: 5px;
+            box-shadow:
+                0 6px 18px rgba(66, 1, 27, 0.072),
+                0 1px 2px rgba(31, 26, 29, .06);
+
+            transition: .35s ease;
         }
 
         .directory-row:hover {
-            background: var(--porcelain);
+            transform: translateY(-2px);
+            border-color: rgba(122, 31, 61, .22);
+
+            box-shadow:
+                0 18px 40px rgba(122, 31, 61, .12),
+                0 8px 18px rgba(31, 26, 29, .08);
         }
 
         .directory-idx {
@@ -1459,7 +1494,7 @@
         .directory-info h3 {
             color: var(--ink);
             font-size: 1.3rem;
-            font-weight: 500;
+            font-weight: 600;
             line-height: 1.4;
             margin-bottom: 4px;
         }
@@ -1494,7 +1529,8 @@
 
         @media (max-width: 768px) {
             .directory-info h3 {
-                font-size: 20px;
+                font-size: 16px;
+                font-weight: 600;
             }
 
             .directory-row .btn-line {
@@ -1558,6 +1594,7 @@
 
         .faq-img {
             max-width: 70%;
+            opacity: 0.7;
             overflow: hidden;
             border-radius: 8px;
         }
@@ -1572,7 +1609,14 @@
         }
 
         .faq-img.img-zoomed img {
-            transform: scale(1.2);
+            transform: scale(1.1);
+        }
+
+        /* ---- hide logo image on mobile ---- */
+        @media (max-width: 767px) {
+            .ftr__logo img {
+                display: none;
+            }
         }
 
         @media (min-width: 992px) {
@@ -1669,7 +1713,7 @@
         .bottom-cta {
             position: relative;
             isolation: isolate;
-            padding: 64px 0;
+            padding: 24px 0;
             text-align: center;
             overflow: hidden;
         }
@@ -1692,7 +1736,7 @@
                     rgba(16, 48, 58, 0.72) 55%,
                     rgba(36, 92, 94, 0.50) 78%,
                     rgba(74, 145, 143, 0.25) 100%),
-                url("Media/ChatGPT Image Aug 1, 2026, 11_11_26 AM (2).png");
+                url("Media/CTA_BG.png");
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -1706,132 +1750,6 @@
             line-height: 1.25;
         }
 
-        /* ==========================================================================
-       12. FOOTER
-       ========================================================================== */
-        .site-footer {
-            background: var(--ink);
-            color: rgba(255, 255, 255, .66);
-            padding: 56px 0 0;
-        }
-
-        .site-footer h5 {
-            color: #fff;
-            font-size: .92rem;
-            margin-bottom: 20px;
-            letter-spacing: .04em;
-            text-transform: uppercase;
-            font-weight: 600;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 36px;
-        }
-
-        @media (min-width: 768px) {
-            .footer-grid {
-                grid-template-columns: 70% 30%;
-                gap: 30px;
-            }
-        }
-
-        .footer-brand {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 700;
-            font-size: 1.02rem;
-            color: #fff;
-            margin-bottom: 16px;
-        }
-
-        .footer-brand .brand-mark svg circle,
-        .footer-brand .brand-mark svg path {
-            stroke: #fff;
-        }
-
-        .site-footer p.desc {
-            font-size: .85rem;
-            line-height: 1.75;
-            max-width: 320px;
-            margin-bottom: 20px;
-        }
-
-        .footer-links li {
-            margin-bottom: 11px;
-        }
-
-        .footer-links a {
-            font-size: .85rem;
-            color: rgba(255, 255, 255, .66);
-            transition: color .2s ease, padding-left .2s ease;
-        }
-
-        .footer-links a:hover {
-            color: var(--brass);
-            padding-left: 4px;
-        }
-
-        .footer-contact li {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 13px;
-            font-size: .9rem;
-            align-items: flex-start;
-        }
-
-        .footer-contact i {
-            color: var(--brass);
-            margin-top: 3px;
-            flex: none;
-            width: 15px;
-        }
-
-        .social-row {
-            display: flex;
-            gap: 9px;
-            margin-top: 18px;
-        }
-
-        .social-row a {
-            width: 36px;
-            height: 36px;
-            border-radius: 3px;
-            background: rgba(255, 255, 255, .06);
-            color: #fff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: background .25s ease, transform .25s ease;
-        }
-
-        .social-row a:hover {
-            background: var(--brass);
-            transform: translateY(-3px);
-        }
-
-        .footer-bottom {
-            border-top: 1px solid rgba(255, 255, 255, .1);
-            margin-top: 44px;
-            padding: 20px 0;
-            font-size: .76rem;
-            text-align: center;
-            color: rgba(255, 255, 255, .42);
-        }
-
-        /* ---- shared responsive container tweaks ---- */
-        @media (min-width: 768px) {
-            .section {
-                padding: 58px 0;
-            }
-
-
-            .section-head {
-                margin-bottom: 46px;
-            }
-        }
 
         /* ==========================================================================
        13. NEW — small heading + note helpers used in Section 3 / Section 4
@@ -1989,9 +1907,43 @@
                         maximize your merit seat options, and complete the counselling process with confidence.
                     </p>
                     <div class="hero-cta-row" data-reveal data-reveal-delay="2">
-                        <a href="#contact" class="btn btn-primary">Connect With Our Experts <i
+                        <a href="#contact" class="btn btn-primarys">Connect With Our Experts <i
                                 class="fa-solid fa-arrow-right"></i></a>
-                        <a href="#merit-seat" class="btn btn-ghost-light">See Merit List Details</a>
+                        <a href="#merit-seat" class="btn-content">
+                            See Merit List Details
+                        </a>
+
+                        <style>
+                            @media (max-width: 768px) {
+                                .hero h1 br {
+                                    display: none;
+                                }
+                            }
+
+                            .btn-content {
+                                display: inline-flex;
+                                /* Content width only */
+                                align-items: center;
+                                justify-content: center;
+                                width: fit-content;
+                                /* Optional */
+                                padding: 14px 28px;
+                                background: transparent;
+                                color: #601e1e;
+                                border: 1px solid #480a0a73;
+                                border-radius: 5px;
+                                text-decoration: none;
+                                font-weight: 600;
+                                white-space: nowrap;
+                                /* Prevents text wrapping */
+                                transition: all .3s ease;
+                            }
+
+                            .btn-content:hover {
+                                background: rgba(255, 255, 255, .12);
+                                border-color: #3c0101;
+                            }
+                        </style>
                     </div>
                 </div>
 
@@ -2134,17 +2086,34 @@
     <!-- ================= MERIT LIST DETAILS ================= -->
     <section class="section" id="merit-seat">
         <div class="wrap">
-            <div class="section-head" data-reveal>
-
-                <h2 class="section-title">Karnataka BDS Government Quota Merit Seats 2026</h2>
-                <p class="section-lead">Admission to BDS Government Quota Merit Seats in Karnataka is conducted through
+            <div class="section-head section-head-center" data-reveal>
+                <h2 class="section-title fs-2 fw-boll">Karnataka BDS Government Quota Merit Seats 2026</h2>
+                <p class="section-lead">
+                    Admission to BDS Government Quota Merit Seats in Karnataka is conducted through
                     the Karnataka Examinations Authority based on NEET UG 2026 scores. Eligible candidates must complete
                     the counselling process, exercise their web options, and participate in seat allotment as per the
                     official counselling schedule.
                 </p>
             </div>
+            <style>
+                .section-head-center {
+                    text-align: center;
+                    max-width: 1200px;
+                    margin: 0 auto 30px;
+                }
 
-            <div class="record-card" data-reveal>
+                .section-head-center .section-title {
+                    font-size: clamp(1.8rem, 3vw, 2.4rem);
+                    line-height: 1.3;
+                }
+
+                .section-head-center .section-lead {
+                    max-width: 1460px;
+                    margin: 16px auto 0;
+                }
+            </style>
+
+            <div class="record-card" style="width: 1100px; margin-inline: auto;" data-reveal>
                 <div class="record-head">
                     <span class="file-title">Particulars</span>
                     <span class="file-title">Details</span>
@@ -2319,26 +2288,20 @@
     <section class="section" style="padding-top:0;">
         <div class="wrap">
             <div class="cta-banner" data-reveal>
-
                 <div class="cta-content">
-
                     <div class="cta-left">
                         <h2>Planning to Pursue BDS in Karnataka?</h2>
-
                         <p>
                             Discover Government Quota Merit Seat opportunities with
                             personalized counselling and expert support at every stage
                             of the admission process.
                         </p>
                     </div>
-
                     <a href="#contact" class="cta-btn">
                         <span>Book Free Consultation</span>
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
-
                 </div>
-
             </div>
         </div>
     </section>
@@ -2359,9 +2322,88 @@
 
         }
 
-        @media (min-width: 768px) {
+        /* ==========================================
+   CTA Banner - Mobile Responsive
+========================================== */
+
+        @media (max-width: 768px) {
+
             .cta-banner {
-                padding: 60px 56px;
+                padding: 28px 20px;
+                border-radius: 12px;
+            }
+
+            .cta-content {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
+            }
+
+            .cta-left {
+                max-width: 100%;
+            }
+
+            .cta-banner h2 {
+                font-size: 1.6rem;
+                line-height: 1.35;
+                margin-bottom: 12px;
+            }
+
+            .cta-banner p {
+                max-width: 100%;
+                margin-bottom: 0;
+                font-size: .95rem;
+                line-height: 1.7;
+            }
+
+            .cta-btn {
+
+                justify-content: space-between;
+                padding: 10px 10px 10px 18px;
+                font-size: .9rem;
+            }
+
+            .cta-btn span {
+                white-space: normal;
+            }
+
+            .cta-btn i {
+                width: 42px;
+                height: 42px;
+                flex-shrink: 0;
+            }
+        }
+
+        /* Extra Small Devices */
+
+        @media (max-width: 480px) {
+
+            .cta-banner {
+                padding: 24px 16px;
+            }
+
+            .cta-banner h2 {
+                font-size: 1.35rem;
+            }
+
+            .cta-banner p {
+                font-size: .9rem;
+            }
+
+            .cta-btn {
+                font-size: .82rem;
+                padding: 8px 8px 8px 16px;
+            }
+
+            .cta-btn i {
+                width: 38px;
+                height: 38px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .cta-content {
+                gap: 12px !important;
             }
         }
 
@@ -2386,7 +2428,7 @@
 
         .cta-banner h2 {
             color: #ffe3e3;
-            font-size: clamp(1.3rem, 3.6vw, 2.3rem);
+            font-size: clamp(1.7rem, 3.6vw, 2.3rem);
             margin-bottom: 14px;
             max-width: 1140px;
             line-height: 1.28;
@@ -2676,7 +2718,7 @@
                 <div class="faq-side" data-reveal>
                     <h2 class="section-title">Frequently<br> Asked Questions</h2>
                     <div class="faq-img">
-                        <img src="Media/ChatGPT Image Aug 1, 2026, 01_16_02 PM.png" alt="">
+                        <img src="Media/FAQs-amico.svg" alt="">
                     </div>
 
                 </div>
@@ -2777,7 +2819,8 @@
     <!-- ================= BOTTOM CTA ================= -->
     <section class="bottom-cta">
         <div class="wrap">
-            <h2 data-reveal>Your Future in Dentistry Begins with the <br> <span style="font-weight: 700;">Right
+            <h2 data-reveal>Your Future in Dentistry Begins with the <span
+                    style="font-weight: 700; color: rgb(255, 255, 255);">Right
                     Choice</span>
             </h2>
             <p class="text-white mb-4 fs-6">Explore BDS Government Quota Merit Seat opportunities in Karnataka and take
@@ -2825,61 +2868,211 @@
                 .btn-outline:hover i {
                     transform: translateX(4px);
                 }
+
+                @media (max-width: 767.98px) {
+                    .bottom-cta p.text-white.mb-4.fs-6 {
+                        font-size: 14px !important;
+                    }
+                }
             </style>
         </div>
     </section>
 
     <!-- ================= FOOTER ================= -->
-    <footer class="site-footer" id="footer">
-        <div class="wrap" style="padding-inline: 90px;">
-            <div class="footer-grid">
-                <div>
-                    <div class="footer-brand">
-                        <a href="#home" class="brand" aria-label="BangaloreStudy.com — home">
-                            <span class="brand-mark">
-                                <img src="Media/BS_logo.svg" style="  filter: brightness(0) invert(1);"
-                                    alt="Bangalore Study">
+    <footer class="ftr" id="footer">
+        <div class="wrap ftr__container">
+            <div class="ftr__grid">
+
+                <!-- Brand + tagline -->
+                <div class="ftr__col">
+                    <div class="ftr__brand">
+                        <a href="#home" class="ftr__brand-link" aria-label="BangaloreStudy.com — home">
+                            <span class="ftr__logo">
+                                <img src="Media/BS_logo.svg" alt="Bangalore Study">
                             </span>
                         </a>
                     </div>
-                    <p class="desc">Guiding Karnataka students through MBBS, BDS, BAMS, BNYS, MDS and Nursing admissions
-                        with expert, end-to-end counselling support.</p>
-
+                    <p class="ftr__tagline">
+                        Fulfilling Academic Aspirations with our Expertise in Educational Counselling.
+                    </p>
                 </div>
 
-                <div>
-                    <h5>Connect With Us</h5>
-                    <ul class="footer-contact">
-                        <li><!-- Call -->
-                            <i class="fa-solid fa-phone"></i>
-                            <a href="tel:+918022455\u200B91">080-22454991</a> &amp; <a
-                                href="tel:+918026631\u200B169">080-26631169</a>
+                <!-- Contact -->
+                <div class="ftr__col">
+                    <h3 class="ftr__title">Contact Us</h3>
+
+                    <ul class="ftr__contact-list">
+                        <li class="ftr__contact-item">
+                            <i class="fa-solid fa-phone ftr__contact-icon"></i>
+                            <a href="tel:+918022454991">080-22454991</a>
+                            <span class="ftr__sep">|</span>
+                            <a href="tel:+918026631169">080-26631169</a>
                         </li>
-                        <li><!-- Call -->
-                            <i class="fa-solid fa-phone"></i>
-                            <a href="tel:+9118001208696">1800 120 8696</a> <span class="muted">(Toll Free)</span>
+                        <li class="ftr__contact-item">
+                            <i class="fa-solid fa-mobile-screen-button ftr__contact-icon"></i>
+                            <a href="tel:+919606949066">+91 9606949066</a>
                         </li>
-                        <li><!-- Globe -->
-                            <i class="fa-solid fa-globe"></i>
-                            Dubai : <a href="tel:+971502436552">+971 50 243 6552</a>
+                        <li class="ftr__contact-item">
+                            <i class="fa-solid fa-headset ftr__contact-icon"></i>
+                            <a href="tel:+9118001208696">1800 120 8696</a>
+                            <span class="ftr__muted">(Toll Free)</span>
                         </li>
-                        <li><!-- Call -->
-                            <i class="fa-solid fa-phone"></i>
-                            <a href="tel:+971504955123">+971 50 495 5123</a>
+                        <li class="ftr__contact-item">
+                            <i class="fa-solid fa-globe ftr__contact-icon"></i>
+                            <a href="tel:+971502436552">+971 502436552</a>
+                            <span class="ftr__muted">(Dubai)</span>
                         </li>
                     </ul>
-                    <div class="social-row">
-                        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-                        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+
+                    <div class="ftr__social">
+                        <a href="#" class="ftr__social-link" aria-label="Facebook"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="ftr__social-link" aria-label="Twitter"><i
+                                class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" class="ftr__social-link" aria-label="YouTube"><i
+                                class="fa-brands fa-youtube"></i></a>
+                        <a href="#" class="ftr__social-link" aria-label="Instagram"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="ftr__social-link" aria-label="LinkedIn"><i
+                                class="fa-brands fa-linkedin-in"></i></a>
                     </div>
                 </div>
             </div>
-            <div class="footer-bottom"></div>
         </div>
     </footer>
+
+    <style>
+        /* ==========================================================================
+   FOOTER
+   ========================================================================== */
+        .ftr {
+            background: var(--ink);
+            color: rgba(255, 255, 255, .66);
+            padding: 24px 50px;
+        }
+
+        .ftr__container {
+            padding-inline: 90px;
+        }
+
+        .ftr__grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+
+        @media (min-width: 768px) {
+            .ftr__grid {
+                grid-template-columns: 63% 37%;
+                align-items: flex-start;
+                gap: 24px;
+            }
+        }
+
+        /* ---- brand / tagline ---- */
+        .ftr__brand {
+            margin-bottom: 18px;
+        }
+
+        .ftr__brand-link {
+            display: inline-flex;
+        }
+
+        .ftr__logo img {
+            height: 68px;
+            width: auto;
+            display: block;
+            filter: brightness(0) invert(1);
+        }
+
+        .ftr__tagline {
+            font-size: .92rem;
+            line-height: 1.75;
+            max-width: 380px;
+            color: rgba(255, 255, 255, .55);
+            margin: 0;
+        }
+
+        /* ---- contact ---- */
+        .ftr__title {
+            color: #fff;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin: 0 0 22px;
+        }
+
+        .ftr__contact-list {
+            list-style: none;
+            margin: 0 0 26px;
+            padding: 0;
+        }
+
+        .ftr__contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: .98rem;
+            color: rgba(255, 255, 255, 0.908);
+            margin-bottom: 8px;
+        }
+
+        .ftr__contact-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .ftr__contact-icon {
+            width: 18px;
+            flex: none;
+            text-align: center;
+            font-size: .95rem;
+            color: rgba(255, 255, 255, .45);
+        }
+
+        .ftr__contact-item a {
+            color: inherit;
+            text-decoration: none;
+            transition: color .2s ease;
+        }
+
+        .ftr__contact-item a:hover {
+            color: #fff;
+        }
+
+        .ftr__sep {
+            color: rgba(255, 255, 255, .35);
+            margin: 0 2px;
+        }
+
+        .ftr__muted {
+            color: rgba(255, 255, 255, .45);
+            margin-left: 2px;
+        }
+
+        /* ---- social ---- */
+        .ftr__social {
+            display: flex;
+            gap: 12px;
+        }
+
+        .ftr__social-link {
+            width: 35px;
+            height: 35px;
+            border-radius: 6px;
+            border: 1px solid rgba(255, 255, 255, .15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            transition: background .2s ease, color .2s ease, transform .2s ease, border-color .2s ease;
+        }
+
+        .ftr__social-link:hover {
+            background: #fff;
+            color: var(--ink);
+            border-color: #fff;
+            transform: translateY(-3px);
+        }
+    </style>
 
 
 
