@@ -694,7 +694,7 @@
             align-items: center;
             gap: 9px;
             padding: 7px 10px;
-          border-radius: 8px;
+            border-radius: 8px;
             background: rgb(251, 251, 251);
             border: 1px solid rgba(59, 16, 16, 0.16);
             color: #2d2a2a;
@@ -751,20 +751,20 @@
 
         /* lead form card */
         .lead-card {
-            background: linear-gradient(135deg, rgb(252, 252, 252) 0%, rgb(186, 176, 181) 100%);
+            background: linear-gradient(135deg, rgb(252, 252, 252) 0%, rgb(144, 134, 136) 100%);
             border-radius: 4px;
             padding: 20px 26px;
             border-top: 3px solid var(--brass);
             position: relative;
 
             box-shadow:
-                0 2px 6px rgba(0, 0, 0, 0.04),
+                0 2px 6px rgba(255, 255, 255, 0.04),
                 0 12px 30px rgba(0, 0, 0, 0.08),
                 0 24px 60px rgba(0, 0, 0, 0.06);
         }
 
         .lead-card h3 {
-            font-size: 0.91rem;
+            font-size: 16px;
             line-height: 1.2;
             text-align: center;
             font-weight: 500;
@@ -977,7 +977,7 @@
 
         .table-scroll table {
             width: 100%;
-            min-width: 560px;
+           
             border-collapse: collapse;
             table-layout: fixed;
         }
@@ -985,7 +985,7 @@
         .table-scroll th,
         .table-scroll td {
             width: 50%;
-            padding: 8px 22px;
+            padding: 8px 12px;
             text-align: left;
             border-bottom: 1px solid var(--line-soft);
             vertical-align: middle;
@@ -1053,6 +1053,8 @@
             color: var(--muted);
             border-top: 1px solid var(--line-soft);
         }
+
+        
 
         /* ---- Priority gauge (signature element) ---- */
         .gauge-wrap {
@@ -2097,7 +2099,7 @@
                 }
             </style>
 
-            <div class="record-card" style="width: 1100px; margin-inline: auto;" data-reveal>
+           <div class="record-card" style="max-width: 1100px; width: 100%; margin-inline: auto;" data-reveal>
                 <div class="record-head">
                     <span class="file-title">Particulars</span>
                     <span class="file-title">Details</span>
@@ -2149,8 +2151,6 @@
                     </table>
                 </div>
                 <div class="record-foot">
-                    <div class="scroll-hint"><i class="fa-solid fa-arrows-left-right"></i> Swipe to view full table
-                    </div>
                     <strong>Note:</strong> The Karnataka Examinations Authority will publish the detailed state
                     counselling notification, including document verification, option entry, seat matrix, and round wise
                     activities, in accordance with the National Medical Commission counselling schedule. Candidates are
